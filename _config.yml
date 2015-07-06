@@ -1,17 +1,17 @@
 # Site settings
-title: Clean Blog
+title: 雨叩晨曦
 header-img: img/home-bg.jpg
-email: your-email@yourdomain.com
-description: "Write your site description here. It will be used as your sites meta description as well!"
+email: henry.m@mahuan.info
+description: "既然选择了远方，便只顾风雨兼程；既然选择了玫瑰，就勇敢吐露真诚。学习，是一种信仰，永无止境。"
 baseurl: ""
-url: "http://yourdomain.com"
+url: "http://www.mahuan.info"
 twitter_username: SBootstrap
-github_username:  davidtmiller
+github_username:  HENRY-M
 facebook_username:  IronSummitMedia
 
 # Build settings
 markdown: kramdown
 highlighter: pygments
 permalink: pretty
-paginate: 5
+paginate: 10
 exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
