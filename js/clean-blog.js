@@ -1,7 +1,7 @@
 /*!
- * Clean Blog v1.0.0 (http://startbootstrap.com)
- * Copyright 2015 Start Bootstrap
- * Licensed under Apache 2.0 (https://github.com/IronSummitMedia/startbootstrap/blob/gh-pages/LICENSE)
+ * v1.0.0 (http://www.mahuan.info)
+ * Copyright 2015 MAHUAN.INFO
+ * Licensed under Apache 2.0 (https://github.com/HENRY-M/info.mahuan/blob/gh-pages/LICENSE)
  */
 
 // Tooltip Init
@@ -46,7 +46,7 @@ $(function() {
                     $('#success > .alert-success').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
                         .append("</button>");
                     $('#success > .alert-success')
-                        .append("<strong>Your message has been sent. </strong>");
+                        .append("<strong>信息已经提交成功，我会尽快同你取得联系 ^ V ^. </strong>");
                     $('#success > .alert-success')
                         .append('</div>');
 
@@ -58,7 +58,7 @@ $(function() {
                     $('#success').html("<div class='alert alert-danger'>");
                     $('#success > .alert-danger').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
                         .append("</button>");
-                    $('#success > .alert-danger').append("<strong>Sorry " + firstName + ", it seems that my mail server is not responding. Please try again later!");
+                    $('#success > .alert-danger').append("<strong>真对不起 " + firstName + ", 看起来我的消息服务器出了点问题，嗯，要不您稍休息会儿再试试吧");
                     $('#success > .alert-danger').append('</div>');
                     //clear all fields
                     $('#contactForm').trigger("reset");
