@@ -5,9 +5,10 @@ email: henry.m@mahuan.info
 description: "既然选择了远方，便只顾风雨兼程；既然选择了玫瑰，就勇敢吐露真诚。而学习，则是一种信仰，永无止境。"
 baseurl: ""
 url: "http://www.mahuan.info"
-sinaweibo_userid: infomahuan
+weibo_userid: infomahuan
 github_username:  HENRY-M
 weixin_userid:  info.mahuan
+linkedin_userid:  dobetter
 
 # Build settings
 markdown: kramdown
