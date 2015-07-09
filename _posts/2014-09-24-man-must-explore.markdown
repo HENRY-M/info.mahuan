@@ -4,8 +4,8 @@ title:      "Man must explore, and this is exploration at its greatest"
 subtitle:   "Problems look mighty small from 150 miles up"
 date:       2014-09-24 12:00:00
 author:     "Start Bootstrap"
-header-img: "img/post-bg-06.jpg"
-sid:    somethingsidforthispost
+header-img: "img/post/post-bg-06.jpg"
+sid:    cf89256511bf2397943adcf51ae7e00d
 ---
 
 <p>Never in all their history have men been able truly to conceive of the world as one: a single sphere, a globe, having the qualities of a globe, a round earth in which all the directions eventually meet, in which there is no center because every point, or none, is center — an equal earth which all men occupy as equals. The airman's earth, if free men make it, will be truly round: a globe in practice, not in theory.</p>
@@ -33,7 +33,7 @@ sid:    somethingsidforthispost
 <p>As we got further and further away, it [the Earth] diminished in size. Finally it shrank to the size of a marble, the most beautiful you can imagine. That beautiful, warm, living object looked so fragile, so delicate, that if you touched it with a finger it would crumble and fall apart. Seeing this has to change a man.</p>
 
 <a href="#">
-    <img src="{{ site.baseurl }}/img/post-sample-image.jpg" alt="Post Sample Image">
+    <img src="{{ site.baseurl }}/img/post/post-sample-image.jpg" alt="Post Sample Image">
 </a>
 <span class="caption text-muted">To go places and do things that have never been done before – that’s what living is all about.</span>
 
