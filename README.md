@@ -5,7 +5,7 @@
 ## 列表
 
 * 博客模板用的Jekyll Themes。[链接在此](http://jekyllthemes.org/themes/clean-blog/)。
-* 社会化评论组件用的搜狐畅言（相比[Disqus](https://disqus.com),畅言对中国用户更友好）。[链接在此](http://changyan.kuaizhan.com/)。
+* 社会化评论组件用的搜狐畅言（相比[Disqus](https://disqus.com)，畅言对中国用户更友好）。[链接在此](http://changyan.kuaizhan.com/)。
 * 在线的Markdown编辑器用的markdown-editor。[链接在此](https://github.com/jbt/markdown-editor)。
 * 博客托管服务器不用说了，当然是GitHub。
 
