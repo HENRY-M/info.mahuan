@@ -9,7 +9,6 @@ weibo_userid: infomahuan
 github_username:  HENRY-M
 weixin_userid:  info.mahuan
 linkedin_userid:  dobetter
-mdeditor:    http://jbt.github.io/markdown-editor
 
 # Build settings
 markdown: kramdown
