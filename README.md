@@ -1,8 +1,8 @@
-# info.mahuan
+# 项目
 &emsp;&emsp;从项目名称上不难看出，这是我的个人博客（[雨叩晨曦](http://www.mahuan.info)）项目。所以README里也没什么可说的，就无脑的罗列一下博客所用到的东西吧，希望对同学们有所帮助。^ V ^。
 
 
-## 列表
+# 说明
 
 * 博客模板用的Jekyll Themes。[链接在此](http://jekyllthemes.org/themes/clean-blog/)。
 * 社会化评论组件用的搜狐畅言（相比[Disqus](https://disqus.com)，畅言对中国用户更友好）。[链接在此](http://changyan.kuaizhan.com/)。
