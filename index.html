@@ -14,7 +14,7 @@ description: "学习是一种信仰，永无止境"
         </h3>
         {% endif %}
     </a>
-    <p class="post-meta">Posted by {% if post.author %}{{ post.author }}{% else %}{{ site.title }}{% endif %} on {{ post.date | date: "%B %-d, %Y" }}</p>
+    <p class="post-meta">作者：{% if post.author %}{{ post.author }}{% else %}{{ site.title }}{% endif %} ， 发稿时间： {{ post.date | date: "%B %-d, %Y" }}</p>
 </div>
 <hr>
 {% endfor %}
