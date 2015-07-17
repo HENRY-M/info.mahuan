@@ -16,6 +16,6 @@ header-img: "img/sitenavi-bg.jpg"
 	<tr>		
 		<td><a href="http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000" target="_blank">Git教程</a></td>
 		<td><a href="http://www.tuhaokuai.com/image" target="_blank">图片压缩</a></td>
-		<td>&nbsp;</td>
+		<td><a href="http://www.qiniu.com">七牛存储</a></td>
 	</tr>
 </table>
