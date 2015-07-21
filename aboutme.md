@@ -21,6 +21,7 @@ header-img: "img/aboutme-bg.jpg"
 
 * 博客模板用的Jekyll Themes。[链接在此](http://jekyllthemes.org/themes/clean-blog/)。
 * 评论插件用的搜狐畅言（相比[Disqus](https://disqus.com)畅言对国内用户更友好）。[链接在此](http://changyan.kuaizhan.com/)。
+* 网站访问统计插件用的百度统计。 [链接在此](http://tongji.baidu.com/)。
 
 #### 工具
 
