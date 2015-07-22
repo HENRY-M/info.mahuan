@@ -1,0 +1,41 @@
+---
+layout:     post
+title:      "《GitHub上的博客》之一"
+subtitle:   "在GitHub搭建一个静态博客，首先需要一个基本的博客写作环境，本篇文章详细记录了博主的写作环境搭建过程。"
+date:       2015-07-01 20:20:00
+author:     "雨叩晨曦"
+header-img: "img/post/000001-head.jpg"
+sid:    000001
+---
+
+---
+
+&emsp;&emsp;一个理想的GitHub博客的写作环境包括 GitHub + Git + Markdown + Jekyll。这里博主写作用的操作系统选择了CentOS6.6 X64 最小化安装的版本，运行于VirtualBox虚拟机上。因为我也没有在其他操作系统试验过，所以我只能说这一系列文章的基础也是基于CentOS6.6 X64操作系统之上的。废话不多说，下面开始罗列环境的搭建过程。
+
+### 1. GitHub准备。
+
+&emsp;&emsp;GitHub为了方便其用户管理和展示自己的软件项目，为用户提供了GitHub Pages功能。该功能允许用户在GitHub上搭建一个静态网站并能够绑定独立的域名。到https://github.com注册一个帐号，注册完成并登录后，创建一个公开的Repository（这里我起的名字就是[info.mahuan](https://github.com/HENRY-M/info.mahuan)），这个用于我们存放博客源代码。到此，我们的GitHub环境就设置完成了。
+
+### 2. 本地安装Git。
+
+&emsp;&emsp;虽然由于Git在开源世界的普及程度，各大Linux软件源都会提供Git软件包，但是用过的同学们就会发现，这些源里提供的Git客户端的版本都比较老旧。因此，这里我介绍一下通过源码安装新版本的步骤：
+
+* 通过下面命令安装Git软件包依赖
+
+```
+  yum install curl-devel expat-devel gettext-devel openssl-devel zlib-devel  
+```
+
+* 访问https://www.kernel.org/pub/software/scm/git并下载最新的gz包。
+
+* 解压下载的压缩包并浏览到源码目录，执行如下命令编译安装
+
+```
+./configure --prefix=/usr/local/git --with-curl --with-expat --with-openssl
+ 
+make 
+ 
+make install
+```
+
+{% include article/art_blog-on-github.html %}
