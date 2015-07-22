@@ -22,20 +22,16 @@ sid:    000001
 
 * 通过下面命令安装Git软件包依赖
 
-```
-  yum install curl-devel expat-devel gettext-devel openssl-devel zlib-devel  
-```
+> yum install curl-devel expat-devel gettext-devel openssl-devel zlib-devel  
 
 * 访问https://www.kernel.org/pub/software/scm/git并下载最新的gz包。
 
 * 解压下载的压缩包并浏览到源码目录，执行如下命令编译安装
 
-```
-./configure --prefix=/usr/local/git --with-curl --with-expat --with-openssl
- 
-make 
- 
-make install
-```
+> ./configure --prefix=/usr/local/git --with-curl --with-expat --with-openssl
+> 
+> make 
+> 
+> make install
 
 {% include article/art_blog-on-github.html %}
