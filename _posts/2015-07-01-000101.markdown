@@ -4,8 +4,8 @@ title:      "《GitHub上的博客》之一"
 subtitle:   "在GitHub搭建一个静态博客，首先需要一个基本的博客写作环境，本篇文章详细记录了博主的写作环境搭建过程。"
 date:       2015-07-01 20:20:00
 author:     "雨叩晨曦"
-header-img: "img/post/000001-head.jpg"
-sid:    "000001"
+header-img: "img/post/000101-head.jpg"
+sid:    "000101"
 ---
 
 ---
@@ -22,7 +22,7 @@ GitHub为了方便其用户管理和展示自己的软件项目，为用户提�
 
 #### 通过下面命令安装Git软件包依赖
 
-	yum install curl-devel expat-devel gettext-devel openssl-devel zlib-devel  
+	yum install curl-devel expat-devel gettext-devel openssl-devel zlib-devel
 
 #### 下载最新的Git源码
 
@@ -156,4 +156,4 @@ GitHub规定Pages的目录必须使用分支 gh-pages，在这个分支下的文
 
 #### 相关博文
 
-{% include article/art_blog-on-github.html %}
+{% include article/S0001.html %}

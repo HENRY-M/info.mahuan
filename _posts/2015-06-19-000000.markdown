@@ -18,4 +18,4 @@ sid:    "000000"
 
 #### 博客相关
 
-{% include article/art_blog-on-github.html %}
+{% include article/S0001.html %}
