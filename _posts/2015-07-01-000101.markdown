@@ -1,13 +1,15 @@
 ---
 layout:      post
-title:       "GitHub上的博客系列之一"
-subtitle:    "搭建博客写作环境"
-description: "在GitHub搭建一个静态博客，首先需要一个基本的博客写作环境，本篇文章详细记录了博主的写作环境搭建过程。"
+title:       "GitHub上的博客之一"
+subtitle:    "在Linux(CentOS)系统上搭建一个易用的博客写作环境"
+description: "在GitHub搭建一个静态博客，首先需要一个基本的博客写作环境，本篇文章详细记录了博主使用CentOS+GitHub+Git+Markdown+Jekyll套件搭建写作环境的详细过程。"
 date:        2015-07-01 20:20:00
 author:      "雨叩晨曦"
 header-img:  "img/post/000101-head.jpg"
 sid:         "000101"
 ---
+
+*本文欢迎转载，请保留作者名称及原文链接，谢谢*
 
 ---
 
@@ -24,6 +26,8 @@ GitHub为了方便其用户管理和展示自己的软件项目，为用户提�
 #### 通过下面命令安装Git软件包依赖
 
 	yum install curl-devel expat-devel gettext-devel openssl-devel zlib-devel
+	yum install gcc
+	yum install perl-ExtUtils-CBuilder perl-ExtUtils-MakeMaker
 
 #### 下载最新的Git源码
 
@@ -58,12 +62,7 @@ GitHub为了方便其用户管理和展示自己的软件项目，为用户提�
 
 	git version 2.4.5
 
-#### 配置Git
-
-为了达到Git可用，这里配置用户名和邮箱即可。命令如下：
-
-	git config --global user.name=你的用户名
-	git config --global user.email=你的邮箱
+到这里，GIT客户端就安装完成了。
 
 ### 3. 安装Jekyll
 
@@ -116,7 +115,57 @@ Jekyll是依赖于Ruby运行的。所以这里先安装Ruby,又考虑到Ruby网�
 
 #### 安装Jekyll
 
+Ruby自带的GEM配置的软件源当然是官方的，但是由于一些众所周知的原因，该软件源经常无法访问，于是需要采用如下步骤替换。这里感谢taobao.org。
+
+查看当前软件源：
+
+	gem sources -l
+
+可以看到当前的源是
+
+	https://rubygems.org/
+
+注意，如果是其他源的话，请一并删除，使用如下命令
+
+	gem sources --remove https://rubygems.org/
+
+添加taobao.org的RUBY源，使用如下命令
+
+	gem sources -a https://ruby.taobao.org/
+
+重新查看当前源（如果有taobao.org之外的其他源，请使用上面命令删除,即需要确保当前源只有taobao.org，原因请查看 [*这里*](https://ruby.taobao.org/)）
+
+现在就可以执行如下命令安装Jekyll了。
+
 	gem install jekyll
+
+#### 安装Node.js
+
+jekyll需要Javascript运行时环境，这里我们使用node.js,为了保持最新版本，我们同样使用源码安装。下载node.js，访问node.js官网，[*连接*](https://nodejs.org/download/)，找到最新版本并下载。下载完成后解压到目录（如果没有该目录，则新建该目录）/usr/local/nodejs/，如下：
+
+	/usr/local/nodejs/node-v0.12.7-linux-x64/
+
+配置环境变量，编辑CentOS系统文件: /etc/profile，添加如下配置：
+
+	#NODE.JS ENV
+	
+	NODEJS_HOME=/usr/local/nodejs/node-v0.12.7-linux-x64
+	export NODEJS_HOME
+	
+	PATH=$NODEJS_HOME/bin:$PATH
+	export PATH
+
+执行如下命令，使配置生效（如果觉得不好用，可重启系统）
+
+	source /etc/profile
+
+执行如下命令，查看是否安装成功
+
+	node -v
+
+如果显示如下，则代表安装成功
+
+	v0.12.7
 
 ### 4. 小试牛刀
 
@@ -142,12 +191,31 @@ GitHub规定Pages的目录必须使用分支 gh-pages，在这个分支下的文
 	git init
 	git checkout --orphan gh-pages
 
+Git首先要做一些基本的配置。使用如下命令配置用户名和邮箱
+
+        git config --global user.name=你的用户名
+        git config --global user.email=你的邮箱
+
 #### 提交博客代码
 
 	git add .
 	git commit -m "my first blog"
 	git remote add origin https://github.com/HENRY-M/info.mahuan.git
 	git push origin gh-pages
+
+如果执行上面命令时报如下错误
+
+        fatal: unable to auto-detect email address
+
+首先使用命令【ls -al】检查当前用户目录下（如果是root用户，则检查/root/目录，如果是其他用户，则检查/home/用户名/）是否存在文件【.gitconfig】。如果存在，则检查文件内容中的user节点配置的数据是否正确，比方如下：
+
+        [user]
+                name = HENRY.M
+                email = email@youremail.com
+
+如果信息错误，则可直接编辑该文件，修改成正确的用户名和邮箱。如果不存在该文件，则使用如下命令创建文件并将上述内容复制到文件中保存即可。
+
+        touch .gitconfig
 
 注意第三步的URL，一定要换成在本文开始GitHub环境准备一节里创建的Repository地址。比如我的就是 https://github.com/HENRY-M/info.mahuan
 

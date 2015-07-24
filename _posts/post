@@ -1,0 +1,22 @@
+---
+layout:      post
+title:       "GitHub上的博客之一"
+subtitle:    "搭建博客写作环境"
+description: "在GitHub搭建一个静态博客，首先需要一个基本的博客写作环境，本篇文章详细记录了博主的写作环境搭建过程。"
+date:        2015-07-01 20:20:00
+author:      "雨叩晨曦"
+header-img:  "img/post/000101-head.jpg"
+sid:         "000101"
+---
+
+*本文欢迎转载，请保留作者名称及原文链接，谢谢*
+
+---
+
+正文在这里
+
+---
+
+#### 相关博文
+
+{% include article/S0001.html %}
