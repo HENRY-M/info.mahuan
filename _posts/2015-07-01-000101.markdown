@@ -15,11 +15,11 @@ sid:         "000101"
 
 ### 1. GitHub准备。
 
-GitHub为了方便其用户管理和展示自己的软件项目，为用户提供了GitHub Pages功能。该功能允许用户在GitHub上搭建一个静态网站并能够绑定独立的域名。到https://github.com注册一个帐号，注册完成并登录后，创建一个公开的Repository（这里我起的名字就是[info.mahuan](https://github.com/HENRY-M/info.mahuan)），这个用于我们存放博客源代码。到此，我们的GitHub环境就设置完成了。
+GitHub为了方便其用户管理和展示自己的软件项目，为用户提供了GitHub Pages功能。该功能允许用户在GitHub上搭建一个静态网站并能够绑定独立的域名。到[GitHub官方网站](https://github.com)注册一个帐号，注册完成并登录后，创建一个公开的Repository（这里我起的名字就是[info.mahuan](https://github.com/HENRY-M/info.mahuan)），这个用于我们存放博客源代码。到此，我们的GitHub环境就设置完成了。
 
 ### 2. 本地安装Git。
 
-虽然由于Git在开源世界的普及程度，各大Linux软件源都会提供Git软件包，但是用过的同学们就会发现，这些源里提供的Git客户端的版本都比较老旧。因此，这里我介绍一下通过源码安装新版本的步骤：
+由于Git在开源世界的普及程度，各大Linux软件源都会提供Git软件包，但是用过的同学们就会发现，这些源里提供的Git客户端的版本都比较老旧。因此，这里我介绍一下通过源码安装新版本的步骤：
 
 #### 通过下面命令安装Git软件包依赖
 
@@ -27,7 +27,7 @@ GitHub为了方便其用户管理和展示自己的软件项目，为用户提�
 
 #### 下载最新的Git源码
 
-访问https://www.kernel.org/pub/software/scm/git，下载最新的gz包。
+访问[GIT客户端下载地址](https://www.kernel.org/pub/software/scm/git)，下载最新的gz包。
 
 #### 解压下载的压缩包并浏览到源码目录，执行如下命令编译安装
 
@@ -37,7 +37,7 @@ GitHub为了方便其用户管理和展示自己的软件项目，为用户提�
 
 #### 配置环境变量
 
-编辑/etc/profile文件，在文件末尾添加如下代码
+编辑Linux的/etc/profile文件，在文件末尾添加如下代码
 
 	#GIT ENV
 	GIT_HOME=/usr/local/git
@@ -50,7 +50,7 @@ GitHub为了方便其用户管理和展示自己的软件项目，为用户提�
 
 	source /etc/profile
 
-#### 查看是否安装成功,执行如下命令
+#### 查看是否安装成功,可以使用如下命令
 
 	git --version
 
@@ -84,7 +84,7 @@ Jekyll是依赖于Ruby运行的。所以这里先安装Ruby,又考虑到Ruby网�
 
 #### 安装RUBY
 
-使用RVM安装则方便的多，执行如下命令
+使用RVM安装则方便的多，执行如下命令查看当前RUBY的版本列表
 
 	rvm list known
 
@@ -120,7 +120,7 @@ Jekyll是依赖于Ruby运行的。所以这里先安装Ruby,又考虑到Ruby网�
 
 ### 4. 小试牛刀
 
-到这一步，整个写作环境就搭建完成了。下面通过几行代码来完成一个既简单的博客。
+到这一步，整个写作环境就搭建完成了。下面通过几行代码来完成一个简单的博客。
 
 #### 创建一个文件夹作为工作空间
 
@@ -137,7 +137,7 @@ Jekyll是依赖于Ruby运行的。所以这里先安装Ruby,又考虑到Ruby网�
 
 #### 初始化Git
 
-GitHub规定Pages的目录必须使用分支 gh-pages，在这个分支下的文件才会被GitHub编译成网页并发布。命令如下
+GitHub规定Pages的目录必须使用分支 gh-pages，在这个分支下的文件才会被GitHub编译成网页并发布，所以这里创建一个没有父类的分支。命令如下
 
 	git init
 	git checkout --orphan gh-pages
