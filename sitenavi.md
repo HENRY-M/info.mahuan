@@ -25,7 +25,6 @@ header-img: "img/sitenavi-bg.jpg"
 	</tr>
 </table>
 
----
 
 ## 友情链接
 
