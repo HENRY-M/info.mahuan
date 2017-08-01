@@ -2,7 +2,7 @@
 layout:      post
 title:       "在GitHub上搭建博客网站"
 subtitle:    "在Linux(CentOS)系统上搭建简单的博客写作环境"
-description: "在GitHub搭建一个静态博客，首先需要一个基本的博客写作环境，本篇文章详细记录了博主使用CentOS+GitHub+Git+Markdown+Jekyll套件搭建写作环境的详细过程。"
+description: "在GitHub搭建一个静态博客，首先需要一个基本的博客写作环境，本篇文章记录了博主使用CentOS+GitHub+Git+Markdown+Jekyll套件搭建写作环境的详细过程。"
 date:        2015-07-01 20:20:00
 author:      "雨叩晨曦"
 header-img:  "img/post/15070101-head.jpg"
