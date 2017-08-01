@@ -1,7 +1,7 @@
 ---
 layout:      post
-title:       "GitHub上的博客之一"
-subtitle:    "在Linux(CentOS)系统上搭建一个易用的博客写作环境"
+title:       "在GitHub上搭建博客网站"
+subtitle:    "在Linux(CentOS)系统上搭建简单的博客写作环境"
 description: "在GitHub搭建一个静态博客，首先需要一个基本的博客写作环境，本篇文章详细记录了博主使用CentOS+GitHub+Git+Markdown+Jekyll套件搭建写作环境的详细过程。"
 date:        2015-07-01 20:20:00
 author:      "雨叩晨曦"
@@ -23,23 +23,23 @@ GitHub为了方便其用户管理和展示自己的软件项目，为用户提�
 
 由于Git在开源世界的普及程度，各大Linux软件源都会提供Git软件包，但是用过的同学们就会发现，这些源里提供的Git客户端的版本都比较老旧。因此，这里我介绍一下通过源码安装新版本的步骤：
 
-#### 通过下面命令安装Git软件包依赖
+#### 2.1 通过下面命令安装Git软件包依赖
 
 	yum install curl-devel expat-devel gettext-devel openssl-devel zlib-devel
 	yum install gcc
 	yum install perl-ExtUtils-CBuilder perl-ExtUtils-MakeMaker
 
-#### 下载最新的Git源码
+#### 2.2 下载最新的Git源码
 
 访问[GIT客户端下载地址](https://www.kernel.org/pub/software/scm/git)，下载最新的gz包。
 
-#### 解压下载的压缩包并浏览到源码目录，执行如下命令编译安装
+#### 2.3 解压下载的压缩包并浏览到源码目录，执行如下命令编译安装
 
 	./configure --prefix=/usr/local/git --with-curl --with-expat --with-openssl
 	make
 	make install
 
-#### 配置环境变量
+#### 2.4 配置环境变量
 
 编辑Linux的/etc/profile文件，在文件末尾添加如下代码
 
@@ -54,7 +54,7 @@ GitHub为了方便其用户管理和展示自己的软件项目，为用户提�
 
 	source /etc/profile
 
-#### 查看是否安装成功,可以使用如下命令
+#### 2.5 查看是否安装成功,可以使用如下命令
 
 	git --version
 
@@ -68,7 +68,7 @@ GitHub为了方便其用户管理和展示自己的软件项目，为用户提�
 
 Jekyll是依赖于Ruby运行的。所以这里先安装Ruby,又考虑到Ruby网站经常被墙的原因，则使用如下方式比较简单省力气。
 
-#### 安装Ruby版本管理器RVM
+#### 3.1 安装Ruby版本管理器RVM
 
 	curl -sSL https://rvm.io/mpapis.asc | gpg2 --import -
 	curl -L get.rvm.io | bash -s stable
@@ -81,7 +81,7 @@ Jekyll是依赖于Ruby运行的。所以这里先安装Ruby,又考虑到Ruby网�
 
 	rvm 1.26.11 (latest) by Wayne E. Seguin <wayneeseguin@gmail.com>, Michal Papis <mpapis@gmail.com> [https://rvm.io/]
 
-#### 安装RUBY
+#### 3.2 安装RUBY
 
 使用RVM安装则方便的多，执行如下命令查看当前RUBY的版本列表
 
@@ -113,7 +113,7 @@ Jekyll是依赖于Ruby运行的。所以这里先安装Ruby,又考虑到Ruby网�
 
 如果没有报错，则到这一步，RUBY安装完成了
 
-#### 安装Jekyll
+#### 3.3 安装Jekyll
 
 Ruby自带的GEM配置的软件源当然是官方的，但是由于一些众所周知的原因，该软件源经常无法访问，于是需要采用如下步骤替换。这里感谢taobao.org。
 
@@ -139,7 +139,7 @@ Ruby自带的GEM配置的软件源当然是官方的，但是由于一些众所�
 
 	gem install jekyll
 
-#### 安装Node.js
+#### 3.4 安装Node.js
 
 jekyll需要Javascript运行时环境，这里我们使用node.js,为了保持最新版本，我们同样使用源码安装。下载node.js，访问node.js官网，[*连接*](https://nodejs.org/download/)，找到最新版本并下载。下载完成后解压到目录（如果没有该目录，则新建该目录）/usr/local/nodejs/，如下：
 
@@ -171,20 +171,20 @@ jekyll需要Javascript运行时环境，这里我们使用node.js,为了保持�
 
 到这一步，整个写作环境就搭建完成了。下面通过几行代码来完成一个简单的博客。
 
-#### 创建一个文件夹作为工作空间
+#### 4.1 创建一个文件夹作为工作空间
 
 	mkdir -p /home/mahuan/openwork/
 	cd /home/mahuan/openwork/
 
-#### 创建博客
+#### 4.2 创建博客
 
 	jekyll new info.mahuan
 
-#### 浏览到博客目录
+#### 4.3 浏览到博客目录
 
 	cd info.mahuan
 
-#### 初始化Git
+#### 4.4 初始化Git
 
 GitHub规定Pages的目录必须使用分支 gh-pages，在这个分支下的文件才会被GitHub编译成网页并发布，所以这里创建一个没有父类的分支。命令如下
 
@@ -196,7 +196,7 @@ Git首先要做一些基本的配置。使用如下命令配置用户名和邮�
         git config --global user.name 你的用户名
         git config --global user.email 你的邮箱
 
-#### 提交博客代码
+#### 4.5 提交博客代码
 
 	git add .
 	git commit -m "my first blog"
@@ -219,7 +219,28 @@ Git首先要做一些基本的配置。使用如下命令配置用户名和邮�
 
 注意第三步的URL，一定要换成在本文开始GitHub环境准备一节里创建的Repository地址。比如我的就是 https://github.com/HENRY-M/info.mahuan
 
-#### 好了，等几分钟后，访问一下地址 http://HENRY-M.github.io/info.mahuan（请把用户名和项目名称换成自己的）, 就会发现博客已经生成了。
+#### 4.6 验证结果
+
+好了，等几分钟后，访问一下地址 http://HENRY-M.github.io/info.mahuan（请把用户名和项目名称换成自己的）, 就会发现博客已经生成了。
+
+
+### 5. 写作环境
+
+最后看一下写作环境。文章在写完之前我们是不希望直接发布到博客站上去的，所以需要一个本地写作的预览环境。
+
+#### 5.1 文章预览
+
+将命令窗口目录浏览到博客代码的根目录info.mahuan。然后执行下面的命令：
+
+        jekyll serve -w --host=0.0.0.0
+
+执行上述命令后，Jekyll服务会启动，从执行完的输出结果看，系统是在4000端口启动。现在在浏览器中访问一下http://IP:4000端口，就能整个看到博客站内容了。其中,w参数代表监听工程文件的变动，发现后自动编译发布。host参数则指定了访问的IP地址，默认只能本机访问，如果指定为0.0.0.0，则代表允许任意IP访问。
+
+#### 5.2 文章编写
+
+由于使用了较为简单的MARKDOWN语法，所以可以直接在文本编辑器进行编辑。也可以使用一些支持MARKDOWN语法的编辑器或者插件。这里我就不多做介绍了。下面列出了一些我用的工具。
+
+* [在线Markdown编辑器-markdown-editor](https://github.com/jbt/markdown-editor)。
 
 ---
 
