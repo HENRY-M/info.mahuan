@@ -193,8 +193,8 @@ GitHub规定Pages的目录必须使用分支 gh-pages，在这个分支下的文
 
 Git首先要做一些基本的配置。使用如下命令配置用户名和邮箱
 
-        git config --global user.name=你的用户名
-        git config --global user.email=你的邮箱
+        git config --global user.name 你的用户名
+        git config --global user.email 你的邮箱
 
 #### 提交博客代码
 
