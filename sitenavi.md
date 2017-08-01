@@ -24,13 +24,3 @@ header-img: "img/sitenavi-bg.jpg"
 		<td><a href="#" target="_blank">&nbsp;</a></td>
 	</tr>
 </table>
-
-
-## 友情链接
-
-<table class="table table-bordered table-striped table-condensed">
-        <tr>
-                <td><a href="http://www.uchdc.com" target="_blank">扯淡资讯</a></td>
-                <td><a href="http://www.netcspec.com" target="_blank">文玛科技</a> </td>
-        </tr>
-</table>
