@@ -1,0 +1,18 @@
+---
+layout:      post
+title:       "信仰"
+subtitle:    "学习是一种信仰，永无止境"
+description: "活到老学到老，就这么一句俗不可耐的谚语，让我在人生里每个不同的阶段都感受到了不同的含义"
+date:        2015-06-19 20:27:00
+author:      "雨叩晨曦"
+header-img:  "img/post/15061901-head.jpg"
+sid:         "15061901"
+---
+
+## 博客目录
+
+---
+
+#### 博客相关
+
+{% include article/bucket-blog.html %}
